@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --main-color: #176d48;
+  --second-color: #f47f0a;
+}
+
+section{
+  padding: 50px 10%;
+}
+
+img{
+  width: 100%;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+  padding: 15px 10%;
+  transition: 0.2s;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  width: 40px;
+}
+
+.navbar{
+  display: flex;
+}
+
+.navbar a{
+  font-size: 1rem;
+  padding: 11px 20px;
+  color: var(--second-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar a:hover{
+  color: orangered;
+}
+
+#menu-icon{
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+
+/*sobre*/
+
+.container {
+  width: 100%;
+  overflow: hidden; /* Limpa o float */
+}
+
+.imagem {
+  width: 50%;
+  float: left;
+}
+
+.texto {
+  width: 45%;
+  float: right;
+  color: #fff;
+  font-size: large;
+}
+
+.sobre{
+  background: #176d48;
+}
+
+/*elenco*/
+
+.heading{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nomes-esquerda, .nomes-direita {
+  width: 45%; /* Defina a largura das colunas */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.ficha{
+  background: #edf2f4;
+}
+
+/*galeria de fotos*/
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px; /* Largura máxima da galeria */
+  margin: 0 auto; /* Centraliza a galeria na página */
+}
+
+.image {
+  width: calc(20% - 16px); /* Define a largura de cada imagem */
+  margin-bottom: 20px; /* Espaçamento inferior entre as linhas de imagens */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+ h2{
+  text-align: center;
+  color: #f47f0a;
+ }
+
+ /*responsive*/
+ @media (max-width: 768px){
+  header{
+    padding: 11px 7%;
+  }
+#menu-icon{
+  display: initial;
+}
+header .navbar{
+  position: absolute;
+  top: -500px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 4px 4px rgb(14 55 54 / 14%);
+  border-top: 2px solid var(--second-color);
+  transition: 0.2s;
+  text-align: left;
+}
+
+.navbar.active{
+  top: 100%;
+  
+}
+.navbar a{
+  padding: 1.5rem;
+  display: block;
+  color: var(--main-color);
+}
+
+
+ }
+
+ @media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .imagem, .texto {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: calc(50% - 16px); /* Define a largura de cada imagem para 50% da largura da tela */
+  }
+}
